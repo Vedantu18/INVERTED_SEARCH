@@ -41,4 +41,7 @@ typedef struct valid_file_list
     struct valid_file_list *link;
 }valid_file;
 
+int validation_of_file(valid_file **head, int argc, char *argv[]);
+int is_duplicate_file(valid_file *head, char *filename);
+
 #endif
