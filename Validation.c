@@ -18,6 +18,8 @@ int validation_of_file(valid_file **head, int argc, char *argv[])
         /*check the file is duplicate or not*/
         if (is_duplicate_file(*head, argv[i]) == SUCCESS)
             continue;
+
+            
     }
 }
 
