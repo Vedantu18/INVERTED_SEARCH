@@ -37,11 +37,14 @@ typedef struct hash
 /*structure of single linked list */
 typedef struct valid_file_list
 {
-    char file_create[50];
+    char Files[50];
     struct valid_file_list *link;
 }valid_file;
 
 int validation_of_file(valid_file **head, int argc, char *argv[]);
 int is_duplicate_file(valid_file *head, char *filename);
+int is_exists_or_empty(char *filename);
+int create_list(valid_file **head, char *filename);
+void print_list(valid_file *head);
 
 #endif
