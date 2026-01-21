@@ -18,7 +18,7 @@ typedef struct sub_node
     struct sub_node *sub_link;
 }sub_node;
 
-/*structure for sub main node*/
+/*structure for main node*/
 typedef struct main_node
 {
     int file_count;
@@ -27,12 +27,11 @@ typedef struct main_node
     struct main_node*main_link;
 }main_node;
 
-/*structure for hash*/
-typedef struct hash
+/*structure for hash table */
+typedef struct hash_table
 {
-    int index;
-    struct main_node *hash_link;
-}hash;
+    struct main_node *table[SIZE]; //it is array of pointers
+}hash_table;
 
 /*structure of single linked list */
 typedef struct valid_file_list
@@ -41,10 +40,14 @@ typedef struct valid_file_list
     struct valid_file_list *link;
 }valid_file;
 
+//All are the function declarationsS
 int validation_of_file(valid_file **head, int argc, char *argv[]);
 int is_duplicate_file(valid_file *head, char *filename);
 int is_exists_or_empty(char *filename);
 int create_list(valid_file **head, char *filename);
 void print_list(valid_file *head);
 
+/*For the database functions*/
+int create_database(hash_table *HT, valid_file *head);
+int process_single_file(hash_table *HT, char *filename);
 #endif
