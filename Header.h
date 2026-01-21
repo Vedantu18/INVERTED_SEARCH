@@ -8,7 +8,7 @@
 
 #define SUCCESS 0
 #define FAILURE -1
-#define SIZE 26
+#define SIZE 27
 
 /*structure for sub node*/
 typedef struct sub_node
@@ -50,4 +50,6 @@ void print_list(valid_file *head);
 /*For the database functions*/
 int create_database(hash_table *HT, valid_file *head);
 int process_single_file(hash_table *HT, char *filename);
+int insert_word_to_databse(hash_table *HT, char *word, char *filename);
+int get_hash_index(char *word);
 #endif
