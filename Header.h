@@ -52,4 +52,8 @@ int create_database(hash_table *HT, valid_file *head);
 int process_single_file(hash_table *HT, char *filename);
 int insert_word_to_databse(hash_table *HT, char *word, char *filename);
 int get_hash_index(char *word);
+void display_database(hash_table *HT);
+void search_database(hash_table *HT, char *word);
+void save_database(hash_table *HT, char *filename);
+void update_database(hash_table *HT, char *filename);
 #endif
