@@ -47,13 +47,14 @@ int is_exists_or_empty(char *filename);
 int create_list(valid_file **head, char *filename);
 void print_list(valid_file *head);
 
+
 /*For the database functions*/
 int create_database(hash_table *HT, valid_file *head);
 int process_single_file(hash_table *HT, char *filename);
 int insert_word_to_databse(hash_table *HT, char *word, char *filename);
 int get_hash_index(char *word);
-void display_database(hash_table *HT);
-void search_database(hash_table *HT, char *word);
-void save_database(hash_table *HT, char *filename);
-void update_database(hash_table *HT, char *filename);
+int display_database(hash_table *HT);
+int search_database(hash_table *HT, char *word);
+int save_database(hash_table *HT, char *filename);
+int update_database(hash_table *HT, char *filename);
 #endif
